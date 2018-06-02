@@ -4,7 +4,7 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'
-             cmd vagrant --version
+             bat vagrant --version
           }
        }
     }
