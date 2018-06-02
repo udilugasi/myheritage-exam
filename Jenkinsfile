@@ -5,6 +5,7 @@ pipeline {
           steps {
              echo 'not using shell'
              bat 'cd *vagrant-nginx-loadbalancing-spring-boot'
+             bat 'vagrant init'
              bat 'vagrant up'
           }
        }
