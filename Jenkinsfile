@@ -5,6 +5,7 @@ pipeline {
           steps {
              sh 'echo step1'
              sh 'echo step2'
+             sh 'echo step3'
              sh '''
                 echo 'Multiline'
                 echo 'Example'
