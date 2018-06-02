@@ -5,7 +5,7 @@ pipeline {
           steps {
              echo 'not using shell'
              bat 'dir'
-             bat 'vagrant up'
+             bat 'vagrant --version'
           }
        }
     }
