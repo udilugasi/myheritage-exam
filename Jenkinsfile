@@ -4,7 +4,7 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'
-             cd 'vagrant-nginx-loadbalancing-spring-boot'
+             bat 'cd *vagrant-nginx-loadbalancing-spring-boot'
              bat 'vagrant --version'
           }
        }
