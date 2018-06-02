@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define "application_jenkins" do |application|
+            application.vm.provider :virtualbox do |v|
+                v.name = "application_jenkins"
+                v.customize [
+                    "modifyvm", :id,
+                    "--name", "application_jenkins",
+                    "--memory", 512,
+                    "--natdnshostresolver1", "on",
+                    "--cpus", 1,
+                ]
+            end
+
+            application.vm.box = "ubuntu/trusty64"
+            application.vm.network :private_network, ip: "192.168.30.20"
+            application.ssh.forward_agent = true
+            application.vm.synced_folder "./", "/vagrant", :nfs => true, :mount_options => ['vers=3','noatime','actimeo=2', 'tcp', 'fsc']
+  end
+  config.vm.provision "shell" do |s|
+    s.path = "provision.sh"
+  end
+end
