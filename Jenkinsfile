@@ -5,6 +5,7 @@ pipeline {
           steps {
              echo 'not using shell'
              bat 'cd vagrant-nginx-loadbalancing-spring-boot && vagrant global-status'
+             bat 'vagrant destroy 9a36031'
           }
        }
     }
