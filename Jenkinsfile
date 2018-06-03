@@ -3,8 +3,7 @@ pipeline {
     stages {
        stage('execute') {
           steps {
-             echo 'not using shell'
-             bat 'cd vagrant-nginx-loadbalancing-spring-boot'
+             echo 'not using shell'             
              bat 'ubuntu run cd ~/.local/bin/ && ubuntu run ls -l'
           }
        }
