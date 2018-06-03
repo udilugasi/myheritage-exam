@@ -4,7 +4,8 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'             
-             bat 'ubuntu /usr/bin/which ansible-playbook'             
+             bat 'ubuntu /usr/bin/which ansible-playbook'
+             sh 'which ansible'
           }
        }
     }
