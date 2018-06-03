@@ -5,7 +5,7 @@ pipeline {
           steps {
              echo 'not using shell'
              bat 'cd vagrant-nginx-loadbalancing-spring-boot'
-             bat 'ubuntu run cd ~/.local/bin/ && cd'
+             bat 'ubuntu run cd ~/.local/bin/ && ll'
           }
        }
     }
