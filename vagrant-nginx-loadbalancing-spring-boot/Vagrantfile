@@ -4,10 +4,10 @@ Vagrant.configure("2") do |config|
     (1..3).each do |i|
         config.vm.define "application_#{i}" do |application|
             application.vm.provider :virtualbox do |v|
-                v.name = "application_#{i}"
+                v.name = "MHapplication_#{i}"
                 v.customize [
                     "modifyvm", :id,
-                    "--name", "application_#{i}",
+                    "--name", "MHapplication_#{i}",
                     "--memory", 512,
                     "--natdnshostresolver1", "on",
                     "--cpus", 1,
