@@ -4,7 +4,7 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'             
-             bat 'ubuntu && run ls -l ~'             
+             bat 'ubuntu && ubuntu run ls -l ~'             
           }
        }
     }
