@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
                 v.customize [
                     "modifyvm", :id,
                     "--name", "application_#{i}",
-                    "--memory", 512,
+                    "--memory", 768,
                     "--natdnshostresolver1", "on",
                     "--cpus", 1,
                 ]
