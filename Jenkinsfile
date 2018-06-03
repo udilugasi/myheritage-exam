@@ -4,7 +4,7 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'             
-             bat 'ubuntu run ls -l /home/udi/.local/bin/'             
+             bat 'ubuntu run /home/udi/.local/bin/ansible-playbook ansible/playbook.yml --inventory-file ansible/inventories/dev'             
           }
        }
     }
