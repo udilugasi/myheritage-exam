@@ -4,8 +4,7 @@ pipeline {
        stage('execute') {
           steps {
              echo 'not using shell'             
-             bat 'ubuntu'
-             sh 'which ansible'
+             bat 'ubuntu && run ls -l ~'             
           }
        }
     }
