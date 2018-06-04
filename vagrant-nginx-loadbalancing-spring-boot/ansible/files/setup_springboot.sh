@@ -21,5 +21,6 @@ git clone https://github.com/GoogleCloudPlatform/getting-started-java.git
 echo "cloned git repository" >> /tmp/setup.log
 cd getting-started-java/helloworld-springboot
 echo `pwd` >> /tmp/setup.log
-sudo mvn spring-boot:run & >> /tmp/setup.log
+sudo nohup mvn spring-boot:run & >> /tmp/setup.log
+echo "Hello World! is Up" >> /tmp/setup.log
 exit
