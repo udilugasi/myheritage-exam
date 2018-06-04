@@ -3,6 +3,7 @@ Repository for myheritage exam - Udi Lugasi
 
 The repo containes The mandatory Tasks.
 
+******
 Prerequisites for the Jenkins and microservices:
 1. Oracle VM VirtualBox installed.
 2. Vagrant installed.
@@ -15,3 +16,8 @@ To run it manually:
 3. vagrant up
 4. ansible-playbook ansible/playbook.yml --inventory-file ansible/inventories/dev
 5. open http://192.168.30.21/ (or open this URL in the browser).
+
+
+******
+codindame directory containes the mandatory coding solutions.
+
